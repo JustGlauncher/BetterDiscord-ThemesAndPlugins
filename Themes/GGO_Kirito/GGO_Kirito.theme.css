@@ -6,12 +6,33 @@
  * @source https://github.com/VaporousCreeper/BetterDiscord-ThemesAndPlugins/tree/master/Themes/GGO_Kirito
  */
 
+@import url(https://puckzxz.github.io/NotAnotherAnimeTheme/build/v3/naat.v3.css);
 @import url('https://raw.githack.com/Ruben7173/Ruben7173.github.io/master/BetterDiscord-Themes/Modules/transparency2.css');
 @import url('https://raw.githack.com/VaporousCreeper/BetterDiscord-ThemesAndPlugins/master/Themes/GGO_Kirito/core.css');
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css);
 
 :root{
+    --columns:			2;
+    --guildsize:		50;
+    --guildgap:			3;
+    --aligndms:			0;
     --background: url('https://images.alphacoders.com/632/632525.png');
     --activetext-colour: white;
+    --home-icon-image: url(https://imgur.com/a/rS9vFVj);
+    --theme-transparency: rgba(0, 0, 0, 0.8);
+    --home-icon-image-position: center center;
+    --small-user-popout-background-image: var(--theme-background-image);
+    --small-user-popout-background-transparency: rgba(0, 0, 0, 0.6);
+    --small-user-popout-background-image-position: center;
+    --big-user-popout-background-image: var(--theme-background-image);
+    --big-user-popout-background-transparency: rgba(0, 0, 0, 0.6);
+    --big-user-popout-background-image-position: center;
+    --code-markup-border: 1px solid transparent;
+    --message-box-transparency: rgba(0, 0, 0, 0.6);
+    --context-menu-transparency: rgba(15, 15, 15, 0.8);
+    --add-discover-icon-transparency: rgba(200, 200, 200, 0.15);
+    --expanded-folder-background-color: transparent;
+    --reaction-emoji-border-color: 1px solid transparent;
 
     --primary1-colour: red;
     --primary2-colour: rgba(255,0,0,0.5);
@@ -20,12 +41,6 @@
     --secondary1-colour: rgba(50,50,50,0.3);
     --secondary2-colour: rgba(100,100,100,0.5);
     --secondary3-colour: rgba(0,0,0,0.5);
-
-    --transparency-1: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-    --transparency-2: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-    --transparency-3: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-    --transparency-4: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-    --transparency-5: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
 }
   
 /*
