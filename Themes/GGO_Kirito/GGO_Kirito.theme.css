@@ -26,6 +26,18 @@
     --transparency-3: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
     --transparency-4: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
     --transparency-5: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    /*
+    Context Menu Transparency
+  */
+  --context-menu-transparency: rgba(15, 15, 15, 0.8);
+    /*
+    Message Box Transparency
+  */
+  --message-box-transparency: rgba(0, 0, 0, 0.6);
+     /*
+    Home Icon Image
+  */
+  --home-icon-image: url(https://imgur.com/a/rS9vFVj);
 }
   
 /*
