@@ -8,10 +8,18 @@
 
 @import url('https://raw.githack.com/Ruben7173/Ruben7173.github.io/master/BetterDiscord-Themes/Modules/transparency2.css');
 @import url('https://raw.githack.com/VaporousCreeper/BetterDiscord-ThemesAndPlugins/master/Themes/GGO_Kirito/core.css');
-
+@import url(https://vsthemes.org/uploads/generator/client/BasicBackground.css);
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css);
+@import url("https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css");
+@import url('https://mr-miner1.github.io/Better-Badges/src/badges.css');
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/ThemeDevBadge.css);
 :root{
     --background: url('https://images.alphacoders.com/632/632525.png');
     --activetext-colour: white;
+    --columns:			2;
+    --guildsize:		50;
+    --guildgap:			2;
+    --aligndms:			0;
 
     --primary1-colour: red;
     --primary2-colour: rgba(255,0,0,0.5);
@@ -21,11 +29,207 @@
     --secondary2-colour: rgba(100,100,100,0.5);
     --secondary3-colour: rgba(0,0,0,0.5);
 
-    --transparency-1: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-    --transparency-2: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-    --transparency-3: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-    --transparency-4: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-    --transparency-5: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    --transparencycolor: 0,0,0;
+    --transparencyalpha: 0.2;
+    --messagetransparency: 0.5;
+    --daccentcolor:					255,0,0;
+    --rs-small-spacing: 2px; /* Gap between avatar and status for members list/dms | MUST end in px */
+    --rs-medium-spacing: 3px; /* Gap between avatar and status for User popout | MUST end in px */
+    --rs-large-spacing: 4px; /* Gap between avatar and status for User profiles | MUST end in px */
+
+    --rs-small-width: 2px; /* Thickness of status border for members list/dms | MUST end in px */
+    --rs-medium-width: 3px; /* Thickness of status border for User popout | MUST end in px */
+    --rs-large-width: 4px; /* Thickness of status border for User profile | MUST end in px */
+
+    --rs-avatar-shape: 50%; /* 50% for round - 0% for square */
+
+    --rs-online-color: #43b581; /* Colour for online status */
+    --rs-idle-color: #faa61a; /* Colour for idle status */
+    --rs-dnd-color: #f04747; /* Colour for dnd status */
+    --rs-offline-color: #636b75; /* Colour for offline status */
+    --rs-streaming-color: #643da7; /* Colour for streaming status */
+    --rs-invisible-color: #747f8d; /* Colour for invisible status - Note: this will only show for your own invisibility */
+    --rs-phone-color: var(--rs-online-color); /* Colour of the ring and phone icon when a user is on their phone |  */
+
+    --rs-phone-visible: block; /* Visibility of the phone icon next to a users avatar. | block = visible | none = hidden */
+    --badge-size: 22px; /*discord defualt = 18px, theme defualt = 22px;*/
+    --badge-margin: 1.5px; /*discord default = 2px, theme defualt = 1.5px*/
+    --badges-everywhere-size: 15px; /*default = 15px*/
+    --settingsmodalbackground: transparent;
+	--settingsmodalwidth: 960px;
+	--settingsmodalheight: 80vh;
+}
+
+#app-mount .baseLayer-W6S8cY {
+	opacity: 1 !important;
+	transform: unset !important;
+	will-change: unset !important;
+}
+#app-mount .stop-animations * {
+	transition-property: inherit !important;
+	animation: inherit !important;
+}
+#app-mount .layer-86YKbF.stop-animations:first-child::after {
+	content: "" !important;
+	position: fixed !important;
+	background: rgb(0, 0, 0) !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	opacity: 0.85 !important;
+	z-index: 999 !important;
+	pointer-events: none !important;
+}
+
+#app-mount .layer-86YKbF ~ .layer-86YKbF {
+	position: absolute !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	background: var(--settingsmodalbackground) !important;
+	border-radius: 5px !important;
+	box-shadow: var(--elevation-high) !important;
+	width: var(--settingsmodalwidth) !important;
+	height: var(--settingsmodalheight) !important;
+	margin: auto !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	contain: unset !important;
+	z-index: 1000 !important;
+}
+#app-mount .layer-86YKbF ~ .layer-86YKbF > div,
+#app-mount .layer-86YKbF ~ .layer-86YKbF .standardSidebarView-E9Pc3j {
+	position: static !important;
+	border-radius: unset !important;
+	width: 100% !important;
+	height: 100% !important;
+	margin: unset !important;
+	padding: unset !important;
+	overflow: hidden !important;
+}
+#app-mount .layer-86YKbF ~ .layer-86YKbF .sidebar-nqHbhN {
+	width: 218px !important;
+	padding: 20px 6px 20px 20px !important;
+}
+#app-mount .layer-86YKbF ~ .layer-86YKbF .contentColumnDefault-3eyv5o {
+	padding: 20px 40px !important;
+}
+#app-mount .layer-86YKbF ~ .layer-86YKbF .repoHeader-2KfNvH {
+	padding-bottom: 0 !important;
+}
+#app-mount .layer-86YKbF ~ .layer-86YKbF .repoScroller-9JnAPs {
+	padding-top: 0 !important;
+}
+#app-mount .layer-86YKbF ~ .layer-86YKbF .sidebar-3K3Z4C {
+	height: var(--settingsmodalheight) !important;
+}
+#app-mount .layer-86YKbF ~ .layer-86YKbF .standardSidebarView-E9Pc3j .editor {
+	height: calc(var(--settingsmodalheight) - 120px) !important;
+}
+#app-mount .layer-86YKbF ~ .layer-86YKbF .toolsContainer-25FL6V,
+#app-mount .layer-86YKbF ~ .layer-86YKbF .toolsContainer-25FL6V .tools-kIrEGr,
+#app-mount .layer-86YKbF ~ .layer-86YKbF .toolsContainer-25FL6V .container-O54IuJ,
+#app-mount .layer-86YKbF ~ .layer-86YKbF .toolsContainer-25FL6V .closeButton-PCZcma {
+	position: absolute !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	background: transparent !important;
+	border: none !important;
+	border-radius: 0 !important;
+	width: 100% !important;
+	max-width: unset !important;
+	height: 100% !important;
+	max-height: unset !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	opacity: 0 !important;
+	cursor: default !important;
+}
+#app-mount .layer-86YKbF ~ .layer-86YKbF .toolsContainer-25FL6V {
+	position: fixed !important;
+	top: 22px !important;
+	z-index: -1 !important;
+}
+#app-mount .layer-86YKbF ~ .layer-86YKbF .settingsToolbar-wu4yfQ {
+	display: none !important;
+}
+#app-mount .layer-86YKbF ~ .layer-86YKbF .header-2Kx1US {
+	max-width: calc(var(--settingsmodalwidth) - 730px) !important;
+}
+
+#app-mount .root-2zfUH6 {
+	position: fixed !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	background: var(--settingsmodalbackground) !important;
+	border-radius: 5px !important;
+	box-shadow: var(--elevation-high) !important;
+	width: var(--settingsmodalwidth) !important;
+	height: var(--settingsmodalheight) !important;
+	margin: auto !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	contain: unset !important;
+	z-index: 1000 !important;
+}
+#app-mount .root-2zfUH6.enterDone-menWZ8 {
+	transform: unset !important;
+}
+#app-mount .perksModal-CLcR1c {
+	position: static !important;
+	border-radius: unset !important;
+	width: 100% !important;
+	height: 100% !important;
+	margin: unset !important;
+	padding: unset !important;
+}
+#app-mount .perksModal-CLcR1c::before {
+	width: var(--settingsmodalwidth) !important;
+	height: var(--settingsmodalheight) !important;
+	margin: auto !important;
+}
+#app-mount .perksModalContentWrapper-3RHugb {
+	padding: 10px 0 10px !important;
+}
+#app-mount .root-2zfUH6 .perksModal-CLcR1c .carousel-3dvee9 {
+	margin-left: calc(-0.5 * (100vw - var(--settingsmodalwidth))) !important;
+}
+#app-mount .root-2zfUH6 .closeWrapper-1aVqeP,
+#app-mount .root-2zfUH6 .closeWrapper-1aVqeP .closeContent-1uXQiy,
+#app-mount .root-2zfUH6 .closeWrapper-1aVqeP .container-O54IuJ,
+#app-mount .root-2zfUH6 .closeWrapper-1aVqeP .closeButton-PCZcma {
+	position: absolute !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	background: transparent !important;
+	border: none !important;
+	border-radius: 0 !important;
+	width: 100% !important;
+	max-width: unset !important;
+	height: 100% !important;
+	max-height: unset !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	opacity: 0 !important;
+	cursor: default !important;
+}
+#app-mount .root-2zfUH6 .closeWrapper-1aVqeP {
+	position: fixed !important;
+	top: 22px !important;
+	z-index: -1 !important;
+}
+    
+    
 }
   
 /*
